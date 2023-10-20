@@ -9,6 +9,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/gpio.h"
+#include "esp_log.h"
 #include "sdkconfig.h"
 
 // GPIO pin with LED
@@ -16,6 +17,9 @@
 
 // Number of Tick periods in 1000 ms
 #define TICK_PERIODS 1000 / portTICK_PERIOD_MS
+
+// Tag for use in logging
+static const char *TAG = "Simple Blink Example";
 
 // Resets GPIO pin and sets as output
 void config_led()
@@ -33,7 +37,7 @@ void app_main()
 
     while (1)
     {
-         
+        ESP_LOGI(TAG, "Turning the LED at GPIO pin %d %s!", BLINK_GPIO, (led_state) ? "ON" : "OFF"); // Log info
         gpio_set_level(BLINK_GPIO, led_state); // Write to  LED
         vTaskDelay(TICK_PERIODS); // Delay for tick periods
         led_state = !led_state; // Toogle state
