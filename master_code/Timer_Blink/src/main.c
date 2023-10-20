@@ -24,7 +24,7 @@ static void periodic_timer_callback(void *arg);
 // GPIO pin number
 const uint8_t blinkGPIO = 1;
 
-// Array of respective LED states for each of those numbers (0 = off, 1 = on)
+// LED states (0/false = off, 1/true = on)
 static volatile bool s_led_state = false;
 
 
@@ -80,6 +80,10 @@ void app_main(void)
 // Callback function toggles LED at every 1 second interval
 static void periodic_timer_callback(void *arg)
 {
+    // Log time elapsed since timer boot
+    int64_t time_since_boot = esp_timer_get_time();
+    ESP_LOGI(TAG, "Periodic timer called, time since boot: %lld us", time_since_boot);
+
     ESP_LOGI(TAG, "Turning the LED at GPIO pin %d %s!", blinkGPIO, (s_led_state) ? "ON" : "OFF"); // Log info
     gpio_set_level(blinkGPIO, !s_led_state);                                                      // Write to GPIO
     s_led_state = !s_led_state;                                                                   // Toggle state
