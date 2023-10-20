@@ -14,6 +14,8 @@ For our software environment, we'll be using PlatformIO on vsCode:
 
 ![image](https://github.com/Ucfacm/embedded_workshop/assets/112581413/3315184f-d646-4920-a71b-bb98de3cef34)
 
+Download vsCode [here](https://code.visualstudio.com/download)
+
 The setup for the PlatformIO IDE can be found [here](https://platformio.org/install/ide?install=vscode)
 
 The code will be written using the ESP-IDF framework
