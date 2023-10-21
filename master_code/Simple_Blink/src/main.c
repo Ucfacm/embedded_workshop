@@ -13,7 +13,7 @@
 #include "sdkconfig.h"
 
 // GPIO pin with LED
-#define BLINK_GPIO 1
+#define BLINK_GPIO 12
 
 // Number of Tick periods in 1000 ms
 #define TICK_PERIODS 1000 / portTICK_PERIOD_MS

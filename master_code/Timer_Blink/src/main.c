@@ -14,7 +14,7 @@
 #include "sdkconfig.h"
 
 // GPIO pin with LED
-#define BLINK_GPIO 1
+#define BLINK_GPIO 12
 
 // Tag for use in logging
 static const char *TAG = "Timer Blink Example";
