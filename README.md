@@ -1,6 +1,6 @@
 # ACM x SHPE Embedded Workshop
 ## This workshop will be split into 3 parts:
-1. Intro to ESP32 GPIO, Timers and Interrupts
+1. Intro to ESP32 GPIO and Hardware Timers 
 2. ESP32 Sensor Data over I2C and UART
 3. ESP32 Sensor Data over Wifi
 
