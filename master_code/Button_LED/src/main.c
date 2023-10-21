@@ -13,7 +13,7 @@
 #define LED_PIN 1
 #define PUSH_BUTTON_PIN 2
 
-void conifg_gpio()
+void config_gpio()
 {
     // Reset GPIO pins and then set their directions
     gpio_reset_pin(LED_PIN);
