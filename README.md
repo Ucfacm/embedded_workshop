@@ -11,6 +11,10 @@ For this workshop we'll be using the ESP32 platform, developed by Espressif. The
 The link to the Espressif docs page can be found [here](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/hw-reference/esp32c3/user-guide-devkitm-1.html)
 
 
+### USB to UART Bridge Driver
+To interface with the board you'll need to install the USB-to-UART driver. [Link here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+
+
 For our software environment, we'll be using PlatformIO on vsCode:
 
 
